@@ -1,0 +1,23 @@
+﻿@model soppingbazar.Entities.category
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Category</h2>
+
+<h1>Are You Sure You want to Delete?</h1>
+
+
+<form method="post">
+    <input type="hidden" name="ID" value="@Model.ID" /><br />
+    <label>Name</label>
+    <input name="Name" value="@Model.Name" />
+    <br />
+    <br />
+    <label>Description</label>
+    <input name="Description" value="@Model.Description" />
+    <br />
+    <button type="submit">Yes Delete</button>
+</form>
+
+<a href="/Index">Cancel</a>

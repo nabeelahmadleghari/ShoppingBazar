@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "soppingbazar.Entities", "so
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingBazar.Database", "ShoppingBazar.Database\ShoppingBazar.Database.csproj", "{FC057D1C-C385-4078-A851-07E05A5412FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingBazar.Services", "ShoppingBazar.Services\ShoppingBazar.Services.csproj", "{90E23BB1-0881-4740-ADFA-8CCD6E8E5C6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FC057D1C-C385-4078-A851-07E05A5412FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC057D1C-C385-4078-A851-07E05A5412FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC057D1C-C385-4078-A851-07E05A5412FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90E23BB1-0881-4740-ADFA-8CCD6E8E5C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E23BB1-0881-4740-ADFA-8CCD6E8E5C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E23BB1-0881-4740-ADFA-8CCD6E8E5C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E23BB1-0881-4740-ADFA-8CCD6E8E5C6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
