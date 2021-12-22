@@ -1,0 +1,67 @@
+﻿@model List<soppingbazar.Entities.product>
+@{
+    ViewBag.Title = "ProductTable";
+}
+
+<h2>ProductTable</h2>
+
+
+<div>
+    <form method="post">
+        <input id="searchtxt" name="Search" />
+        <button type="button" id="searchBtn">Search</button>
+
+    </form>
+    <button id="newBtn">New</button>
+
+</div>
+
+
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Product Name</td>
+                <td>Category</td>
+                <td>Price</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>.....</td>
+                    <td>@product.Price</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+<script>
+    $("#searchBtn").click(function () {
+        var searchvalue = $("#searchtxt").val();
+        alert(searchvalue);
+
+        $.ajax({
+            url: "/Product/ProductTable",
+            data: {
+                search: searchvalue
+            }
+        })
+            .done(function (response) {
+                $("#tableContainer").html(response);
+            })
+            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("Failed!!!");
+            });
+    });
+</script>
