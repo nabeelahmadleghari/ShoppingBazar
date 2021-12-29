@@ -36,7 +36,7 @@
                     <td>.....</td>
                     <td>@product.Price</td>
                     <td>
-                        <button>Edit</button>
+                        <button id="editBtn">Edit</button>
                         <button>Delete</button>
                     </td>
                 </tr>
@@ -49,7 +49,7 @@
 <script>
     $("#searchBtn").click(function () {
         var searchvalue = $("#searchtxt").val();
-        alert(searchvalue);
+        
 
         $.ajax({
             url: "/Product/ProductTable",
@@ -59,6 +59,20 @@
         })
             .done(function (response) {
                 $("#tableContainer").html(response);
+            })
+            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("Failed!!!");
+            });
+    });
+
+
+    $("#newBtn").click(function () {
+       
+        $.ajax({
+            url: "/Product/Create"
+        })
+            .done(function (response) {
+                $("#actionContainer").html(response);
             })
             .fail(function (XMLHttpRequest, textStatus, errorThrown) {
                 alert("Failed!!!");
