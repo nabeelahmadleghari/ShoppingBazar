@@ -44,5 +44,29 @@ namespace shoppingbazar.web.Controllers
             serviceproduct.SaveProduct(Product);
             return RedirectToAction("ProductTable");
         }
+
+        [HttpGet]
+        public ActionResult Edit(int ID)
+        {
+            var product = serviceproduct.GetProducts(ID);
+            return PartialView(product);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(product Product)
+        {
+
+            serviceproduct.UpdateProduct(Product);
+            return RedirectToAction("ProductTable");
+        }
+
+
+        [HttpPost]
+        public ActionResult Delete(int ID)
+        {
+
+            serviceproduct.DeleteProduct(ID);
+            return RedirectToAction("ProductTable");
+        }
     }
 }

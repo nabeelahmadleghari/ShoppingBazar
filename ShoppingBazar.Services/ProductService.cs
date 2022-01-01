@@ -57,7 +57,7 @@ namespace ShoppingBazar.Services
 
 
 
-        public void DeleteCategory(int ID) //Database me categories Delete krne k liay
+        public void DeleteProduct(int ID) //Database me categories Delete krne k liay
         {
             using (var context = new SBcontext())
             {
